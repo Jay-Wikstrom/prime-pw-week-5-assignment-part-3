@@ -12,8 +12,14 @@ function addToCollection(title, artist, yearPublished){
   return album;
 } //end function
 
-//Test for addToCollection function
+function showCollection(array){
+  console.log('The length of this array is:', array.length)
+  for (let i = 0; i < array.length; i++){
+    console.log(`${array[i].title} by ${array[i].artist} published in ${array[i].yearPublished}.`)
+  }
+}
 
+//Test for addToCollection function
 //Test for same artist
 console.log(addToCollection('Thriller', 'Michael Jackson', 1982));
 console.log(addToCollection('Bad', 'Michael Jackson', 1987));
@@ -26,3 +32,6 @@ console.log(addToCollection('Hybrid Theory', 'Linkin Park', 2000));
 console.log(addToCollection('The Dark Side of the Moon', 'Pink Floyd', 1973));
 console.log(addToCollection('Nevermind', 'Nirvana', 1991));
 console.log(collection);
+
+//Test for showCollection
+showCollection(collection);
