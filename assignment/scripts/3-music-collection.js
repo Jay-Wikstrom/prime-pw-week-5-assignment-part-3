@@ -16,8 +16,18 @@ function showCollection(array){
   console.log('The length of this array is:', array.length)
   for (let i = 0; i < array.length; i++){
     console.log(`${array[i].title} by ${array[i].artist} published in ${array[i].yearPublished}.`)
-  }
-}
+  } //end for loop
+} //end function
+
+function findByArtist(artist){
+  let array = [];
+  for (let i = 0; i < collection.length; i++ ){
+    if (collection[i].artist === artist){
+      array.push(artist);
+    }
+  } //end for loop
+  return array;
+} //end function
 
 //Test for addToCollection function
 //Test for same artist
@@ -35,3 +45,8 @@ console.log(collection);
 
 //Test for showCollection
 showCollection(collection);
+
+//Test for findByArtist
+console.log(findByArtist('Eminem'));
+console.log(findByArtist(''));
+console.log(findByArtist('Michael Jackson'));
